@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutto quello da sapere sulla dieta</title>
+    <meta name="description" content="Scopri migliaia di alimenti con informazioni nutrizionali dettagliate. Calcola il tuo piano dietetico personalizzato. Database nutrizionale completo con calorie, proteine, carboidrati e grassi per ogni alimento.">
+    <meta name="keywords" content="dieta, nutrizione, alimenti, calorie, proteine, carboidrati, grassi, piano dietetico, calcolatore dieta, database nutrizionale, alimenti italiani, valori nutrizionali, BMR, TDEE, dimagrire, aumentare peso, mantenere peso, alimenti sani, nutrizione italiana, dieta italiana, alimenti calorie, tabella nutrizionale, calcolo calorie, piano alimentare, ricette dieta, alimenti proteici, alimenti carboidrati, frutta, verdura, proteine, cereali, latticini, frutta secca">
+    <meta name="author" content="Nutrition Hub - Made in Italy">
+    <meta name="geo.region" content="IT">
+    <meta name="geo.placename" content="Italy">
+    <meta name="language" content="Italian, English, French, Spanish, German, Chinese">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta property="og:title" content="Nutrition Hub - Your Complete Diet Guide">
+    <meta property="og:description" content="Database nutrizionale completo con migliaia di alimenti e calcolatore dieta personalizzato. Made in Italy.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nutrition Hub - Your Complete Diet Guide">
+    <meta name="twitter:description" content="Database nutrizionale completo con migliaia di alimenti e calcolatore dieta personalizzato. Made in Italy.">
+    <link rel="stylesheet" href="diet-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1 class="logo" data-translate="siteTitle">Tutto quello da sapere sulla dieta</h1>
+                    <!-- Search Bar - Accanto al logo -->
+                    <div class="search-wrapper-header">
+                        <label for="foodSearch" class="search-label-header" data-translate="searchLabel">Ricerca alimento</label>
+                        <div class="search-container-header">
+                            <input type="text" id="foodSearch" class="search-input-header" placeholder="Cerca alimenti..." data-translate-placeholder="searchPlaceholder">
+                            <button class="search-btn-header" id="searchBtn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.35-4.35"></path>
+                                </svg>
+                            </button>
+                            <div class="search-results" id="searchResults"></div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="main-nav">
+                    <a href="#foods" data-translate="navFoods">Foods</a>
+                    <a href="#calculator" data-translate="navCalculator">Diet Calculator</a>
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <select id="languageSelect">
+                            <option value="en">English</option>
+                            <option value="it">Italiano</option>
+                            <option value="fr">Français</option>
+                            <option value="es">Español</option>
+                            <option value="de">Deutsch</option>
+                            <option value="zh">中文</option>
+                        </select>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title" data-translate="heroTitle">Tutto quello da sapere sulla dieta</h2>
+                <p class="hero-subtitle" data-translate="heroSubtitle">Scopri migliaia di alimenti, monitora i nutrienti e crea il tuo piano dietetico personalizzato</p>
+                
+                <!-- Diet Information Section - Subito sotto il titolo -->
+                <div class="diet-info-content">
+                    <div class="diet-info-grid">
+                        <div class="diet-info-card">
+                            <div class="diet-info-icon">📚</div>
+                            <h3 data-translate="dietInfoWhatTitle">Definizione</h3>
+                            <p data-translate="dietInfoWhatText">La dieta è l'insieme degli alimenti che una persona assume abitualmente. Non significa necessariamente restrizione calorica, ma piuttosto un modo equilibrato di nutrirsi per mantenere o migliorare la propria salute.</p>
+                        </div>
+                        <div class="diet-info-card">
+                            <div class="diet-info-icon">💪</div>
+                            <h3 data-translate="dietInfoBenefitsTitle">Benefici</h3>
+                            <p data-translate="dietInfoBenefitsText">Una dieta equilibrata offre numerosi benefici: migliora l'energia quotidiana, supporta il sistema immunitario, aiuta a mantenere un peso sano, migliora la salute cardiovascolare e promuove il benessere mentale.</p>
+                        </div>
+                        <div class="diet-info-card">
+                            <div class="diet-info-icon">⚖️</div>
+                            <h3 data-translate="dietInfoBalanceTitle">Equilibrio Nutrizionale</h3>
+                            <p data-translate="dietInfoBalanceText">Un'alimentazione bilanciata include proteine per la costruzione muscolare, carboidrati per l'energia, grassi sani per le funzioni vitali, vitamine e minerali essenziali per il corretto funzionamento dell'organismo.</p>
+                        </div>
+                        <div class="diet-info-card">
+                            <div class="diet-info-icon">🎯</div>
+                            <h3 data-translate="dietInfoGoalsTitle">Obiettivi</h3>
+                            <p data-translate="dietInfoGoalsText">Che tu voglia dimagrire, aumentare di peso o semplicemente mantenere il tuo peso attuale, una dieta personalizzata basata sulle tue esigenze è fondamentale per raggiungere i tuoi obiettivi in modo sano e sostenibile.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Foods Section -->
+    <section id="foods" class="foods-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="foodsTitle">Nutritional Database</h2>
+            <p class="section-subtitle" data-translate="foodsSubtitle">Browse our comprehensive collection of foods with detailed nutritional information</p>
+            
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="all" data-translate="filterAll">All</button>
+                <button class="filter-btn" data-category="fruits" data-translate="filterFruits">Fruits</button>
+                <button class="filter-btn" data-category="vegetables" data-translate="filterVegetables">Vegetables</button>
+                <button class="filter-btn" data-category="proteins" data-translate="filterProteins">Proteins</button>
+                <button class="filter-btn" data-category="grains" data-translate="filterGrains">Grains</button>
+                <button class="filter-btn" data-category="dairy" data-translate="filterDairy">Dairy</button>
+                <button class="filter-btn" data-category="nuts" data-translate="filterNuts">Nuts & Seeds</button>
+                <button class="filter-btn" data-category="beverages" data-translate="filterBeverages">Beverages</button>
+                <button class="filter-btn" data-category="oils" data-translate="filterOils">Oils & Fats</button>
+            </div>
+
+            <!-- Foods Grid -->
+            <div class="foods-grid" id="foodsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Diet Calculator Section -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="calculatorTitle">Personalized Diet Calculator</h2>
+            <p class="section-subtitle" data-translate="calculatorSubtitle">Get your custom meal plan based on your goals and body metrics</p>
+            
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <h3 data-translate="formTitle">Your Information</h3>
+                    
+                    <div class="form-group">
+                        <label data-translate="labelGender">Gender</label>
+                        <div class="radio-group">
+                            <input type="radio" id="male" name="gender" value="male" checked>
+                            <label for="male" data-translate="genderMale">Male</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female" data-translate="genderFemale">Female</label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-translate="labelAge">Age</label>
+                            <input type="number" id="age" min="1" max="120" placeholder="25">
+                        </div>
+                        <div class="form-group">
+                            <label data-translate="labelHeight">Height (cm)</label>
+                            <input type="number" id="height" min="50" max="250" placeholder="175">
+                        </div>
+                        <div class="form-group">
+                            <label data-translate="labelWeight">Weight (kg)</label>
+                            <input type="number" id="weight" min="20" max="300" step="0.1" placeholder="70">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-translate="labelActivity">Activity Level</label>
+                        <select id="activityLevel">
+                            <option value="1.2" data-translate="activitySedentary">Sedentary (little or no exercise)</option>
+                            <option value="1.375" data-translate="activityLight">Lightly active (light exercise 1-3 days/week)</option>
+                            <option value="1.55" data-translate="activityModerate">Moderately active (moderate exercise 3-5 days/week)</option>
+                            <option value="1.725" data-translate="activityActive">Very active (hard exercise 6-7 days/week)</option>
+                            <option value="1.9" data-translate="activityExtra">Extra active (very hard exercise, physical job)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-translate="labelGoal">Goal</label>
+                        <select id="goal">
+                            <option value="lose" data-translate="goalLose">Lose Weight</option>
+                            <option value="maintain" data-translate="goalMaintain">Maintain Weight</option>
+                            <option value="gain" data-translate="goalGain">Gain Weight</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="goalAmountGroup" style="display: none;">
+                        <label data-translate="labelGoalAmount">Weekly Weight Change (g)</label>
+                        <input type="number" id="goalAmount" min="100" max="2000" step="100" placeholder="500" value="500">
+                        <small data-translate="goalAmountHint">Recommended: 500g per week for healthy progress</small>
+                    </div>
+
+                    <button class="calculate-btn" id="calculateBtn" data-translate="btnCalculate">Calculate My Diet Plan</button>
+                </div>
+
+                <div class="calculator-results" id="calculatorResults" style="display: none;">
+                    <h3 data-translate="resultsTitle">Your Diet Plan</h3>
+                    <div class="results-content" id="resultsContent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p data-translate="footerText">© 2024 Nutrition Hub - Your complete nutrition guide</p>
+        </div>
+    </footer>
+
+    <script src="diet-script.js"></script>
+</body>
+</html>
